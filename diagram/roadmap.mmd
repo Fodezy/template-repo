@@ -1,0 +1,28 @@
+flowchart TD
+    A[Idea] --> B[Validate Optional]
+    B --> C[Scope and Plan MVP]
+    C --> D[Design and Architecture]
+
+    D --> E{Ready to Build?}
+    E -->|Yes| ITER
+    E -->|No - run spikes| S[Timeboxed Spikes]
+    S --> C
+
+    subgraph ITER[Iteration Cycle 1-2 Weeks]
+        P1[Plan iteration tasks] --> P2[Build features]
+        P2 --> P3[Test: unit + integration + manual]
+        P3 --> P4[Code review + CI]
+        P4 --> P5[Demo increment]
+        P5 --> P6[Review and adjust backlog]
+        P6 --> DEC{Pivot or Continue?}
+        DEC -->|Continue| P1
+        DEC -->|Pivot next sprint| ADR[Create ADR + Spike ticket]
+        ADR --> P1
+    end
+
+    ITER --> K[Pre-Launch Testing]
+    K --> L{Go / No-Go}
+    L -->|Go| M[Launch MVP]
+    L -->|No-Go| P1
+    M --> N[Gather feedback and metrics]
+    N --> ITER
