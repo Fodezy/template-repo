@@ -1,0 +1,19 @@
+# ADR-00X: <Decision Title>
+
+## Context
+What problem are we solving? What constraints matter?
+
+## Options Considered
+- Option A: …
+- Option B: …
+- Option C: …
+
+## Decision
+We choose <option> because …
+
+## Consequences
+- Positive: …
+- Negative: …
+
+## Rollback / Migration
+If this fails, we will … (feature flag, revert plan)

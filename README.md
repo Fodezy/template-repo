@@ -1,37 +1,31 @@
-# Idea → Product Starter
+# Solo‑Dev Lite Template
 
-A lightweight playbook and templates to take a concept from idea to a shippable MVP, then iterate without chaos.
+A dead-simple template for solo projects. Minimal folders, one issue template, and two tiny docs.
+Use this to start fast without heavy process.
 
 ## What's inside
-- **docs/Idea-to-Product-OnePager.pdf** — concise lifecycle reference.
-- **templates/** — copy‑paste templates (PRD, ADR, Spike, Risk Register, Test Plan, Launch Checklist).
+- `docs/PRD_TEMPLATE.md` — one-page spec with acceptance criteria
+- `docs/ADR_TEMPLATE.md` — one-page architecture decision memo
+- `docs/ROADMAP.md` — Now / Next / Later (keep it short)
+- `.github/ISSUE_TEMPLATE/simple.yml` — single generic issue form
+- `LICENSE` — MIT (replace the name with yours)
 
-## Suggested Workflow
-1. **Ideation & Validation (3–10 days)** — write an *Idea Brief*, test assumptions with users or a landing page.
-2. **Scope & Plan (2–5 days)** — define your MVP and write a lightweight **PRD**.
-3. **Design & Architecture (3–7 days)** — wireframes, stack choice, CI/testing scaffold, initial **ADRs**.
-4. **Build Iterations (1–2 weeks)** — Plan → Build → Test → Review → Demo → Retro; ship behind flags.
-5. **Pre‑Launch Testing (2–7 days)** — regression, UAT, perf/security sanity, rollout plan.
-6. **Launch & Feedback** — canary rollout, analytics & error tracking, triage.
-7. **Post‑Launch Iteration** — prioritize with RICE, reserve ~15% for tech debt, monthly roadmap review.
+## Quick start
+1. Push this repo to GitHub and mark it as a **Template Repository** (Settings → Template repository).
+2. Start a new project by clicking **Use this template**, or via CLI:
+   ```bash
+   gh repo create YOUR_USER/my-new-project --template YOUR_USER/solo-dev-lite --private --clone
+   ```
+3. Open `docs/ROADMAP.md` and jot down **Now / Next / Later**.
+4. For each feature/bug/spike, open **one Issue** using the simple template.
+5. If a spike changes direction, write **one ADR** (5 minutes) to capture the decision.
 
-## Decision Aid: Pivot vs Continue
-- **Unblocks critical MVP risk?** Spike next sprint (timebox) and decide via ADR.
-- **Current approach fails AC/perf?** Spike → ADR → plan migration with flags.
-- **Pushes MVP beyond 6 weeks?** Defer unless existential.
-
-## Testing Strategy (CI Gates)
-- Unit → Integration → Contract → E2E (few, critical).
-- CI: lint/format, tests, coverage ≥70% (non‑decreasing), build/scan, optional SAST/DAST.
-
-## Templates
-See **/templates** for ready‑to‑use docs:
-- PRD.md
-- ADR.md
-- SPIKE.md
-- RISK_REGISTER.md
-- MVP_TEST_PLAN.md
-- LAUNCH_CHECKLIST.md
+## Five simple rules
+1. New idea → one Issue (label: feature, bug, or spike).
+2. Spikes end with a decision → `docs/ADR_TEMPLATE.md` copy, fill, commit.
+3. Roadmap stays short (3–9 bullets total).
+4. Ship the smallest thing that meets the PRD.
+5. After a mini-release, note 3 bullets: keep / stop / try (in the issue).
 
 ---
 

@@ -1,0 +1,30 @@
+name: Generic Issue
+description: Create a simple ticket (feature, bug, or spike)
+labels: []
+body:
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type
+      options:
+        - feature
+        - bug
+        - spike
+        - debt
+      multiple: false
+  - type: textarea
+    id: context
+    attributes:
+      label: Context / Problem
+      description: What are we solving? Why does it matter now?
+  - type: textarea
+    id: plan
+    attributes:
+      label: Plan / Acceptance Criteria
+      description: Outline the approach or Given/When/Then.
+  - type: input
+    id: timebox
+    attributes:
+      label: Timebox (for spikes, e.g., 6h)
+    validations:
+      required: false
